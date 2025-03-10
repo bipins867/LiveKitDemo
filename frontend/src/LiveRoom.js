@@ -5,8 +5,8 @@ import Chat from "./Chat";
 import "@livekit/components-styles";
 import "./LiveRoom.css"; // We'll create this file next
 
-const host = "http://192.168.31.4:3000";
-
+const host = process.env.REACT_APP_REMOTE_ADDRESS;
+console.log(host);
 const LiveRoom = ({ roomName, identity }) => {
   const [accessToken, setAccessToken] = useState("");
   const [isBroadcaster, setIsBroadcaster] = useState(false);
