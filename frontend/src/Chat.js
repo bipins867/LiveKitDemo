@@ -10,7 +10,7 @@ const Chat = ({ room, user }) => {
   useEffect(() => {
     if (!room || !user) return; // Ensure room and user are available
 
-    ws.current = new W3CWebSocket(`ws://localhost:3000`); // Replace with your websocket server url
+    ws.current = new W3CWebSocket(`wss://livekitbackend.sarthiq.com`); // Replace with your websocket server url
 
     ws.current.onopen = () => {
       console.log('WebSocket Client Connected');
